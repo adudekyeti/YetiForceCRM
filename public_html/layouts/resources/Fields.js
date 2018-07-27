@@ -642,6 +642,9 @@ App.Fields = {
 				if (select.hasClass('tags')) {
 					params.tags = true;
 				}
+				if (params.tags = true) {
+					params.placeholder = app.vtranslate('JS_SELECT_OR_WRITE_AND_PRESS_ENTER');
+				}
 				select.select2(params)
 					.on("select2:open", function (e) {
 						if (select.data('unselecting')) {
