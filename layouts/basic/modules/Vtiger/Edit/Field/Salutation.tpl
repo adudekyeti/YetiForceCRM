@@ -11,7 +11,7 @@
 -->*}
 {strip}
 	<div class="tpl-Edit-Field-Salutation row">
-		{if $SALUTATION_FIELD_MODEL}
+		{if !empty($SALUTATION_FIELD_MODEL)}
 			{assign var=PICKLIST_VALUES value=$SALUTATION_FIELD_MODEL->getPicklistValues()}
 			{assign var="SALUTATION_VALIDATOR" value=$SALUTATION_FIELD_MODEL->getValidator()}
 			<div class="col-md-5">
@@ -23,7 +23,7 @@
 				</select>
 			</div>
 		{/if}	
-		<div class="{if $SALUTATION_FIELD_MODEL}col-md-7{else}col-md-12{/if}">
+		<div class="{if !empty($SALUTATION_FIELD_MODEL)}col-md-7{else}col-md-12{/if}">
 			{assign var="FIELD_INFO" value=\App\Purifier::encodeHtml(\App\Json::encode($FIELD_MODEL->getFieldInfo()))}
 			{assign var="SPECIAL_VALIDATOR" value=$FIELD_MODEL->getValidator()}
 			{assign var="FIELD_NAME" value=$FIELD_MODEL->getName()}
