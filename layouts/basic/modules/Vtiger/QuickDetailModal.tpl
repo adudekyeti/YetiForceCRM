@@ -30,7 +30,7 @@
 				<div class="col-md-12">
 					{foreach key=key item=WIDGET from=$WIDGETS}
 						<div class="quickDetailWidget">
-							{if $WIDGET['title']}
+							{if !empty($WIDGET['title'])}
 								<h4>{$WIDGET['title']}</h4>
 							{/if}
 							<div>{$WIDGET['content']}</div>
