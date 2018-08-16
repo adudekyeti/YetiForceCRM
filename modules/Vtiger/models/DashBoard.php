@@ -38,7 +38,7 @@ class Vtiger_DashBoard_Model extends \App\Base
 	/**
 	 *  Function to get the module name.
 	 *
-	 *  @return string - name of the module
+	 * @return string - name of the module
 	 */
 	public function getModuleName()
 	{
@@ -69,7 +69,7 @@ class Vtiger_DashBoard_Model extends \App\Base
 		while ($row = $dataReader->read()) {
 			$row['linkid'] = $row['id'];
 			if ($row['linklabel'] === 'Mini List') {
-				if (!$row['isdefault'] && \App\Privilege::isPermitted($moduleModel->getName(), 'CreateDashboardFilter', false, $userId)) {
+				if (!$row['isdefault'] && \App\Privilege::isPermitted($moduleModel->getName(), 'CreateDashboardFilter', false, $currentUser->getId())) {
 					$row['deleteFromList'] = true;
 				}
 				$minilistWidget = Vtiger_Widget_Model::getInstanceFromValues($row);
