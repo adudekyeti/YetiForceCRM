@@ -23,7 +23,7 @@ class PrivilegeUpdater
 	 */
 	public static function checkGlobalSearchPermissions($moduleName, $userId = false)
 	{
-		if (!$userId) {
+		if (empty($userId)) {
 			$userId = User::getCurrentUserId();
 		}
 		if (!isset(static::$globalSearchPermissionsCache[$userId][$moduleName])) {
@@ -88,13 +88,13 @@ class PrivilegeUpdater
 		$db->createCommand()
 			->update('u_#__crmentity_search_label', [
 				'userid' => $searchUsers,
-				], 'crmid = ' . $record)
-				->execute();
+			], 'crmid = ' . $record)
+			->execute();
 		$db->createCommand()
 			->update('vtiger_crmentity', [
 				'users' => $recordAccessUsers,
-				], 'crmid = ' . $record)
-				->execute();
+			], 'crmid = ' . $record)
+			->execute();
 	}
 
 	/**
@@ -118,8 +118,8 @@ class PrivilegeUpdater
 		\App\Db::getInstance()->createCommand()
 			->update('u_#__crmentity_search_label', [
 				'userid' => $searchUsers,
-				], 'crmid = ' . $record)
-				->execute();
+			], 'crmid = ' . $record)
+			->execute();
 	}
 
 	/**
@@ -143,8 +143,8 @@ class PrivilegeUpdater
 		\App\Db::getInstance()->createCommand()
 			->update('vtiger_crmentity', [
 				'users' => $recordAccessUsers,
-				], 'crmid = ' . $record)
-				->execute();
+			], 'crmid = ' . $record)
+			->execute();
 	}
 
 	/**
@@ -161,10 +161,10 @@ class PrivilegeUpdater
 			'module' => $moduleName,
 			'type' => $type,
 		];
-		if ($record) {
+		if (!empty($record)) {
 			$params['crmid'] = $record;
 		}
-		if ($priority) {
+		if (false !== $priority) {
 			$params['priority'] = $priority;
 		}
 		$insert = $update = $row = false;
