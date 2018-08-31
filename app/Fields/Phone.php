@@ -53,7 +53,7 @@ class Phone
 	public static function verifyNumber($phoneNumber, $phoneCountry)
 	{
 		$phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
-		if ($phoneCountry && !in_array($phoneCountry, $phoneUtil->getSupportedRegions())) {
+		if (!empty($phoneCountry) && !in_array($phoneCountry, $phoneUtil->getSupportedRegions())) {
 			throw new \App\Exceptions\FieldException('LBL_INVALID_COUNTRY_CODE');
 		}
 		try {
