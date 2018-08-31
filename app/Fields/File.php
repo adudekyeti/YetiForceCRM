@@ -744,7 +744,7 @@ class File
 	public static function initStorageFileDirectory($suffix = false)
 	{
 		$filepath = 'storage' . DIRECTORY_SEPARATOR;
-		if ($suffix) {
+		if (!empty($suffix)) {
 			$filepath .= $suffix . DIRECTORY_SEPARATOR;
 		}
 		if (!is_dir($filepath)) { //create new folder
