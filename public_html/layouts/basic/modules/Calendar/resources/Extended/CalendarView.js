@@ -386,15 +386,16 @@ Calendar_Calendar_Js('Calendar_CalendarExtended_Js', {}, {
 		}
 		subDatesElements.each(function (key, element) {
 			let data = $(this).data('date'),
-				type = $(this).data('type');
+				type = $(this).data('type'),
+				userFormat = CONFIG.dateFormat.toUpperCase();
 			if (type === 'years') {
-				dateArray[key] = [moment(data + '-01').format('YYYY-MM-DD') + ' 00:00:00', moment(data + '-01').endOf('year').format('YYYY-MM-DD') + ' 23:59:59'];
+				dateArray[key] = [moment(data + '-01').format(userFormat) + ' 00:00:00', moment(data + '-01').endOf('year').format(userFormat) + ' 23:59:59'];
 			} else if (type === 'months') {
-				dateArray[key] = [moment(data).format('YYYY-MM-DD') + ' 00:00:00', moment(data).endOf('month').format('YYYY-MM-DD') + ' 23:59:59'];
+				dateArray[key] = [moment(data).format(userFormat) + ' 00:00:00', moment(data).endOf('month').format(userFormat) + ' 23:59:59'];
 			} else if (type === 'weeks') {
-				dateArray[key] = [moment(data).format('YYYY-MM-DD') + ' 00:00:00', moment(data).add(6, 'day').format('YYYY-MM-DD') + ' 23:59:59'];
+				dateArray[key] = [moment(data).format(userFormat) + ' 00:00:00', moment(data).add(6, 'day').format(userFormat) + ' 23:59:59'];
 			} else if (type === 'days') {
-				dateArray[key] = [moment(data).format('YYYY-MM-DD') + ' 00:00:00', moment(data).format('YYYY-MM-DD') + ' 23:59:59'];
+				dateArray[key] = [moment(data).format(userFormat) + ' 00:00:00', moment(data).format(userFormat) + ' 23:59:59'];
 			}
 		});
 		AppConnector.request({
