@@ -455,7 +455,7 @@
 		}
 
 		&.active {
-			@include c-arrows-color(material-color('green', '400'));
+			@include c-arrows-color(material-color('red', '900'));
 
 			.c-arrows__text {
 				font-weight: bold;
