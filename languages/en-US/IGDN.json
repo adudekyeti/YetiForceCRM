@@ -9,7 +9,7 @@
     "FL_SUBJECT": "Subject",
     "FL_NUMBER": "Number",
     "FL_STORAGE": "Storage",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "FL_SSIGNLEORDERS": "Purchase Order",
     "PLL_DRAFT": "Draft",
     "PLL_IN_REALIZATION": "In realization",
