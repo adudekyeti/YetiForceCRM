@@ -1,6 +1,6 @@
 {
   "php": {
-    "OSSMailView": "Corporate emails",
+    "OSSMailView": "Company Emails",
     "SINGLE_OSSMailView": "Corporate email",
     "LBL_RECORDS_LIST": "List of emails",
     "LBL_INFORMATION": "General Information",
@@ -17,7 +17,7 @@
     "Subject": "Subject",
     "Content": "Content",
     "SendType": "Type",
-    "Sent": "Sent",
+    "Sent": "SENT",
     "Received": "Received",
     "Internal": "Internal",
     "Spam": "Spam",
