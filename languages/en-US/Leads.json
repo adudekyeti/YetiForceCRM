@@ -1,6 +1,6 @@
 {
   "php": {
-    "Verification data": "Verification data",
+    "Verification data": "Data verification",
     "Attempted to Contact": "Attempted to contact",
     "CANNOT_CONVERT": "Cannot convert",
     "Cold": "Cold",
@@ -9,7 +9,7 @@
     "Contact in Future": "Contact in future",
     "Designation": "Designation",
     "Dr.": "Dr.",
-    "Email": "Primary email",
+    "Email": "Primary Email",
     "Hot": "Hot",
     "Industry": "Industry",
     "Sub industry": "Sub-branch",
@@ -44,7 +44,7 @@
     "Secondary Email": "Secondary email",
     "SINGLE_Leads": "Lead",
     "Warm": "Warm",
-    "Website": "Website",
+    "Website": "Web Site",
     "PLL_TO_REALIZE": "For processing",
     "PLL_CONTACTS_IN_THE_FUTURE": "Contact in the future",
     "PLL_LEAD_UNTAPPED": "Unobtained",
