@@ -1,6 +1,6 @@
 {
   "php": {
-    "TEST_PHARSE": "English test pharse",
+    "TEST_PHARSE": "Deutsch test pharse",
     "GlobalPermission": "Datenzugriff",
     "LBL_SEND_EMAIL": "Via E-Mail senden",
     "--None--": "--keine--",
