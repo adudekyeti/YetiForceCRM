@@ -1,6 +1,6 @@
 {
   "php": {
-    "LBL_APP_NAME": "Name",
+    "LBL_APP_NAME": "Subject",
     "LBL_ADDRESS_URL": "URL",
     "LBL_TYPE_SERVER": "Type",
     "LBL_API_KEY": "Key",
