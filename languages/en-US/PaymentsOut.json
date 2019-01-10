@@ -8,7 +8,7 @@
     "LBL_PAYMENTSTITLE": "Payment title",
     "LBL_PAYMENTSNO": "Number",
     "LBL_BANK_ACCOUNT": "Bank account number",
-    "LBL_PAYMENTSSTATUS": "Status",
+    "LBL_PAYMENTSSTATUS": "Lead status",
     "LBL_PAYMENTS_IMPORT": "Payments import",
     "LBL_RELATEDID": "Related to",
     "LBL_SALESID": "Invoice \/ order",
@@ -34,7 +34,7 @@
     "Date": "Date",
     "Kontrahent": "Account",
     "Liczba transakcji:": "Number of transactions:",
-    "Title": "Subject",
+    "Title": "Title",
     "NEXT": "Next"
   }
 }
