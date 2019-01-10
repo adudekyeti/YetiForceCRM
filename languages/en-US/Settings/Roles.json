@@ -12,7 +12,7 @@
     "LBL_COPY_PRIVILEGES_FROM": "Copy privileges from",
     "LBL_DELETE_ROLE": "Delete Role",
     "LBL_DUPLICATES_EXIST": "Duplicate existing Role",
-    "LBL_NAME": "Name",
+    "LBL_NAME": "Subject",
     "LBL_PRIVILEGES": "Privileges",
     "LBL_PROFILE": "Profile",
     "LBL_REPORTS_TO": "Reports to",
