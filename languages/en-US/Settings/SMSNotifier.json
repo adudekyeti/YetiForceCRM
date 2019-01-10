@@ -1,7 +1,7 @@
 {
   "php": {
-    "FL_PROVIDER": "Provider",
-    "FL_STATUS": "Status",
+    "FL_PROVIDER": "Vendor",
+    "FL_STATUS": "Lead status",
     "FL_SMSAPI_FROM": "Message type",
     "FL_API_KEY": "Api key",
     "PLL_INACTIVE": "Inactive",
