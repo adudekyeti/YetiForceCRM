@@ -12,7 +12,7 @@
     "LBL_LOCATION": "Location",
     "LBL_PHONE_CALL_ID": "Call ID on telephone",
     "LBL_DURATION": "Call duration time",
-    "LBL_STATUS": "Status",
+    "LBL_STATUS": "Lead status",
     "LBL_START_TIME": "Call started",
     "LBL_END_TIME": "Call ended",
     "LBL_COUNTRY_CODE": "Country code",
