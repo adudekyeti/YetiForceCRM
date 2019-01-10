@@ -45,5 +45,7 @@
     "LBL_WIDGET_DOWNLOAD": "Download graph",
     "LBL_WIDGET_PRINT": "Print graph"
   },
-  "js": {}
+  "js": {
+
+  }
 }
