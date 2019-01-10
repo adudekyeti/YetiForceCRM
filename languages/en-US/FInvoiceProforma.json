@@ -2,7 +2,7 @@
   "php": {
     "FInvoiceProforma": "Proforma invoices",
     "SINGLE_FInvoiceProforma": "Proforma invoice",
-    "LBL_CUSTOM_INFORMATION": "System information",
+    "LBL_CUSTOM_INFORMATION": "System Information",
     "LBL_ADDRESS_DELIVERY_INFORMATION": "Delivery address",
     "FL_SUBJECT": "Subject",
     "FL_PAYMENT_DATE": "Due date",
@@ -13,8 +13,8 @@
     "FL_NUMBER": "Invoice number",
     "FL_TOTAL": "Net",
     "FL_GROSS": "Gross",
-    "PLL_CASH": "Cash",
+    "PLL_CASH": "cash",
     "PLL_TRANSFER": "Bank transfer",
-    "PLL_WIRE_TRANSFER": "Electronic transfer"
+    "PLL_WIRE_TRANSFER": "Wire transfer"
   }
 }
