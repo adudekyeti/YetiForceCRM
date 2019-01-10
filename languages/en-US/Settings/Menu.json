@@ -52,7 +52,7 @@
   },
   "js": {
     "JS_EDIT": "Edit",
-    "JS_REMOVE": "Remove",
+    "JS_REMOVE": "Delete",
     "JS_NO_DATA": "No menu",
     "JS_TEST_HOTKEY_OK": "Hot key works properly."
   }
