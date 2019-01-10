@@ -1,7 +1,7 @@
 {
   "php": {
     "LocationRegister": "Location Register",
-    "SINGLE_LocationRegister": "Location Register",
+    "SINGLE_LocationRegister": "Location register",
     "LBL_BASIC_INFORMATION": "Basic Information",
     "FL_NAME": "Name",
     "FL_PARENT_LOCATION": "Parent location",
@@ -10,7 +10,7 @@
     "PLL_IN_REALIZATION": "In realization",
     "PLL_COMPLETED": "Completed",
     "PLL_CANCELLED": "Cancelled",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "PLL_ELECTRONIC": "Electronic",
     "PLL_PHYSICAL": "Physical",
     "FL_SECURITY_TYPE": "Security type",
@@ -21,12 +21,12 @@
     "FL_STATE": "State",
     "FL_POBOX": "PO box",
     "FL_LOCAL_NUMBER": "Office number",
-    "FL_POST_CODE": "Post code",
+    "FL_POST_CODE": "Post Code",
     "FL_CITY": "City",
     "FL_COUNTY": "County",
     "FL_COUNTRY": "Country",
     "FL_TOWNSHIP": "Township",
-    "LBL_DESCRIPTION": "Description",
+    "LBL_DESCRIPTION": "Notes",
     "FL_DESCRIPTION": "Description",
     "FL_COMMENTS": "Comments",
     "LBL_COMMENTS": "Comments"
