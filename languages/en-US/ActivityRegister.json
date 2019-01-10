@@ -5,7 +5,7 @@
     "LBL_BASIC_INFORMATION": "Basic Information",
     "FL_SUBJECT": "Subject",
     "FL_PARENT_ACTIVITY": "Parent activity",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "PLL_DRAFT": "Draft",
     "PLL_WAITING_FOR_ACCEPTANCE": "Waiting for acceptance",
     "PLL_IN_REALIZATION": "In realization",
@@ -21,7 +21,7 @@
     "FL_END_DATE": "End date",
     "LBL_DATES": "Activity dates",
     "LBL_DESCRIPTION": "Description",
-    "FL_DESCRIPTION": "Description",
+    "FL_DESCRIPTION": "Notes",
     "FL_COMMENTS": "Comments",
     "LBL_COMMENTS": "Comments",
     "FL_ACTIVITY_TYPE": "Activity type"
