@@ -88,6 +88,7 @@
     "ActivityComplete": "Inchideti inregistrari",
     "ActivityPostponed": "Amanati inregistrari",
     "Emails": "Trimite email [SMTP]",
+    "ModTracker": "Change history",
     "AssignToYourself": "Assign to me",
     "AutoAssignRecord": "Automatic transfer of records"
   },
