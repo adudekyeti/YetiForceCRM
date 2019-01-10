@@ -30,7 +30,7 @@
     "LBL_INSTALL_BUTTON": "Install",
     "LBL_INSTALL_PREREQUISITES": "Verify server configuration",
     "LBL_MORE_INFORMATION": "More information",
-    "LBL_LIBRARY_NAME": "Library name",
+    "LBL_LIBRARY_NAME": "Name",
     "LBL_NEXT": "Next",
     "LBL_ONE_LAST_THING": "One last thing...",
     "LBL_PASSWORD_MISMATCH": "Please re-enter passwords.  The \\\"Password\\\" and \\\"Re-type password\\\" values do not match.",
