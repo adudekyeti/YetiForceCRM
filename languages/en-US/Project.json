@@ -29,7 +29,7 @@
     "LBL_MILESTONES": "Milestones",
     "LBL_TASKS": "Tasks",
     "LBL_STATUS_IS": "Status is",
-    "LBL_STATUS": "Status",
+    "LBL_STATUS": "Lead status",
     "LBL_TICKET_PRIORITY": "Priority",
     "LBL_MORE": "more",
     "PLL_INTERNAL": "Internal",
@@ -53,7 +53,7 @@
     "archived": "Archived"
   },
   "js": {
-    "JS_NO.": "No.",
+    "JS_NO.": "Asset no.",
     "JS_DURATION_SHORT": "Time",
     "JS_FILTER_BY_STATUSES": "Status filters",
     "JS_UPDATE_GANTT": "Update view",
