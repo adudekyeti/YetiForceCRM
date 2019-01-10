@@ -10,7 +10,7 @@
     "SearchFields": "Columns for search mechanisms",
     "Tools": "Actions",
     "Update labels": "Update labels",
-    "LBL_SAVE_CHANGES_SEARCHING": "Saved changes.",
+    "LBL_SAVE_CHANGES_SEARCHING": "Changes saved",
     "LBL_SAVE_CHANGES_LABLE": "Changes in configuration have been saved, you have to update this module to see the changes within the system.",
     "Update has been completed": "Selected module updated successfully. Changes will be realized via CRON. Label update time depends on the amount of data.",
     "LBL_SAVE_MODULE_SEQUENCE": "Save modules sequence",
