@@ -2,7 +2,7 @@
   "php": {
     "SRecurringOrders": "Recurring Sales Orders",
     "SINGLE_SRecurringOrders": "Recurring Sales Order",
-    "LBL_SRECURRINGORDERS_INFORMATION": "Basic information",
+    "LBL_SRECURRINGORDERS_INFORMATION": "Basic Information",
     "LBL_CUSTOM_INFORMATION": "System Information",
     "LBL_DESCRIPTION_INFORMATION": "Descriptive information",
     "LBL_STATISTICS": "Statistics",
@@ -11,7 +11,7 @@
     "LBL_SUBJECT": "Subject",
     "LBL_NUMBER": "Number",
     "LBL_CLOSED_TIME": "Closed time",
-    "LBL_STATUS": "Status",
+    "LBL_STATUS": "Lead status",
     "LBL_RESPONSE_TIME": "Response time",
     "LBL_REALIZATION_START_DATE": "Realization start date",
     "LBL_REALIZATION_COMPLETION_DATE": "Realization completion date",
