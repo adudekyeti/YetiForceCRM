@@ -24,7 +24,7 @@
     "LBL_PHONE": "Phone",
     "LBL_EMAIL": "Email",
     "LBL_VATID": "Vat ID",
-    "LBL_SALE_DATE": "Sale date",
+    "LBL_SALE_DATE": "Date of sale",
     "LBL_PAYMENT_METHOD": "Payment method",
     "LBL_PLACE_DATE": "Place, date"
   }
