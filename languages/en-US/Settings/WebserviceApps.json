@@ -12,6 +12,6 @@
     "LBL_TITLE_EDIT": "Edit"
   },
   "js": {
-    "JS_DELETE_CONFIRMATION": "Are you sure you want to delete the key?"
+    "JS_DELETE_CONFIRMATION": "Are you sure you want to remove the key?"
   }
 }
