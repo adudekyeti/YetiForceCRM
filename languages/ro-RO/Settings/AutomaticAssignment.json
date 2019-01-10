@@ -29,7 +29,7 @@
     "LBL_SMOWNERS_INFO": "Lista utilizatorilor pre-alocati este creata de utilizatorii, grupurile de mai jos. Aceasta lista de utilizatori este creata numai daca nu exista utilizatori selectati din roluri.",
     "LBL_ASSIGN_INFO": "Setati Atribuit la implicit. Valoarea setata aici va fi atribuita inregistrarii atunci cand utilizatorul, care a fost atribuit, nu poate fi gasit.",
     "LBL_CONDITIONS_INFO": "Setati conditiile de cautare a inregistrarilor. Pentru a selecta un utilizator din lista de utilizatori disponibila, sistemul numara numarul de inregistrari atribuite utilizatorului in modul. Utilizatorul cu cel mai mic numar de inregistrari este atribuit inregistrarii.",
-    "LBL_ROLEID_INFO": "Setati unul dintre urmatoarele moduri: SYSTEM - utilizator prin mecanisme precum sarcini de lucru si manipulatoare de fluxuri de lucru; NON-SYSTEM \u2013  permite sa atribui manual o inregistrare de catre utilizator."
+    "LBL_ROLEID_INFO": "Setati unul dintre urmatoarele moduri: SYSTEM - utilizator prin mecanisme precum sarcini de lucru si manipulatoare de fluxuri de lucru; NON-SYSTEM –  permite sa atribui manual o inregistrare de catre utilizator."
   },
   "js": {
     "JS_STATE_CONFIRMATION": "Siguri doriti sa modificati starea inregistrarii?",
