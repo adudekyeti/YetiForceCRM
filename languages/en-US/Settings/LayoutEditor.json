@@ -1,6 +1,6 @@
 {
   "php": {
-    "Calendar": "To Do",
+    "Calendar": "To do",
     "Checkbox": "Checkbox",
     "Currency": "Currency",
     "Date": "Date",
@@ -39,7 +39,7 @@
     "LBL_NON_ROLE_BASED_PICKLIST": "No role based picklist",
     "LBL_NO_RELATED_INFORMATION": "No related information",
     "LBL_PICKLIST_VALUES": "Picklist values",
-    "LBL_QUICK_CREATE": "Quick Create",
+    "LBL_QUICK_CREATE": "Quick create",
     "LBL_REACTIVATE": "Reactivate",
     "LBL_ROLE_BASED_PICKLIST": "Role based picklist",
     "LBL_SAVE_FIELD_SEQUENCE": "Save field sequence",
@@ -50,7 +50,7 @@
     "MultiSelectCombo": "Multi-select combo box",
     "Percent": "Percent",
     "Phone": "Phone",
-    "Picklist": "Pick list",
+    "Picklist": "Picklist",
     "Skype": "Skype",
     "TextArea": "Text area",
     "Text": "Text",
