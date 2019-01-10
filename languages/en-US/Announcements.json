@@ -5,7 +5,7 @@
     "LBL_ANNOUNCEMENTS_INFORMATION": "Basic information",
     "LBL_SUBJECT": "Subject",
     "LBL_NUMBER": "Number",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "FL_INTERVAL": "Reminder time",
     "FL_IS_MANDATORY": "Obligatory to accept",
     "PLL_DRAFT": "Draft",
