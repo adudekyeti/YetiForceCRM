@@ -4,10 +4,10 @@
     "Reservations": "Reservations",
     "LBL_MAIN_INFORMATION": "Reservation details",
     "LBL_BLOCK": "Relations",
-    "LBL_TOTAL_TIME": "Total time",
-    "LBL_STATUS": "Status",
+    "LBL_TOTAL_TIME": "Total time [h]",
+    "LBL_STATUS": "Lead status",
     "Assigned To": "Assigned to",
-    "LBL_TITLE": "Title",
+    "LBL_TITLE": "Subject",
     "LBL_START_DATE": "Start date",
     "LBL_END_DATE": "End date",
     "LBL_TIME_START": "Start time",
@@ -17,7 +17,7 @@
     "LBL_RESERVATIONS_TYPE": "Reservation type",
     "PLL_ACCEPTED": "For approval",
     "PLL_TO_APPROVAL": "Accepted",
-    "LBL_RELATEDA": "Company",
+    "LBL_RELATEDA": "Member of",
     "LBL_RELATEDB": "Process",
     "LBL_TYPE": "Type",
     "LBL_MEETING_ROOMS": "Meeting rooms",
@@ -29,10 +29,10 @@
   "js": {
     "MSG_ERROR_NUMBER": "Allowed characters: [0-9]",
     "JS_DATE_SHOULD_BE_GREATER_THAN": "End date cannot be equal or less than Start Date",
-    "JS_HOURS_SHOULD_BE_SMALLER_THAN": "Number of hours should be smaller than 24h",
+    "JS_HOURS_SHOULD_BE_SMALLER_THAN": "Working time cannot exceed 24 hours",
     "JS_START_DATE": "Start date",
     "JS_END_DATE": "End date",
-    "JS_COMPANY": "Company",
+    "JS_COMPANY": "Member of",
     "JS_TOTAL_TIME": "Total time",
     "PLL_ACCEPTED": "For approval",
     "PLL_TO_APPROVAL": "Approved",
@@ -41,6 +41,6 @@
     "JS_ASSIGNED_TO": "Assigned to",
     "JS_TYPE": "Type",
     "JS_YES": "Yes",
-    "JS_NO": "No"
+    "JS_NO": "Sun"
   }
 }
