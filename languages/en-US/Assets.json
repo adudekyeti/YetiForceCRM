@@ -5,7 +5,7 @@
     "LBL_ASSET_INFORMATION": "Asset details",
     "Asset No": "Asset no.",
     "Serial Number": "Serial number",
-    "Date Sold": "Date sold",
+    "Date Sold": "Date of sale",
     "Date in Service": "Expiry date",
     "Invoice Name": "Invoice number",
     "Shipping Tracking Number": "Shipping tracking number",
@@ -35,6 +35,6 @@
     "BLOCK_INFORMATION_TIME": "Time information",
     "LBL_ORDER_TIME": "Order time",
     "LBL_EXPIRING_SOLD_PRODUCTS": "Expiring sold products",
-    "LBL_CHANGE_STATUS": "Change Status"
+    "LBL_CHANGE_STATUS": "Change status"
   }
 }
