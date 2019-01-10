@@ -14,7 +14,7 @@
     "FL_ACCOUNT": "Account",
     "FL_TOTAL": "Net",
     "FL_GROSS": "Gross",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "PLL_CASH": "cash",
     "PLL_TRANSFER": "Bank transfer",
     "PLL_WIRE_TRANSFER": "Wire transfer",
