@@ -10,7 +10,7 @@
     "SummaryCategory": "Data summary",
     "Comments": "Comments",
     "Updates": "Updates",
-    "Activities": "Calendar",
+    "Activities": "Activities",
     "EmailList": "List of emails",
     "RelatedModule": "Related module",
     "WYSIWYG": "WYSIWYG",
@@ -62,7 +62,7 @@
   },
   "js": {
     "Loading data": "Loading...",
-    "Saving changes": "Saving changes...",
+    "Saving changes": "Update in progress…",
     "None": "None",
     "JS_EDIT_WIDGET": "Edit widget"
   }
