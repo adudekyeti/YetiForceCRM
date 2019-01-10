@@ -63,7 +63,7 @@
     "Ticket ID": "No.",
     "Ticket No": "No.",
     "Ticket Title": "Ticket title",
-    "Title": "Title",
+    "Title": "Subject",
     "Update History": "Update history",
     "Urgent": "Urgent",
     "Wait For Response": "Wait for response",
@@ -84,8 +84,8 @@
     "LBL_NOTICE_CREATE": "Added",
     "LBL_NOTICE_MODIFICATION": "Modification",
     "LBL_NOTICE_CLOSE": "Closed",
-    "Services": "services",
-    "Support": "support",
-    "Administrative": "administrative"
+    "Services": "Services",
+    "Support": "Support",
+    "Administrative": "Administrative"
   }
 }
