@@ -2,7 +2,7 @@
   "php": {
     "Competition": "Competition",
     "SINGLE_Competition": "Competitor",
-    "LBL_COMPETITION_INFORMATION": "Basic information",
+    "LBL_COMPETITION_INFORMATION": "Basic Information",
     "LBL_CUSTOM_INFORMATION": "System Information",
     "LBL_DESCRIPTION_INFORMATION": "Descriptive information",
     "LBL_SUBJECT": "Name",
