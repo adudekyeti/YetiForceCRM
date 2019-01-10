@@ -28,7 +28,7 @@
     "LBL_SORT_DESCENDING_ORDER": "Sort in descending order"
   },
   "js": {
-    "Saving changes": "Saving changes...",
+    "Saving changes": "Update in progress…",
     "Update labels": "Update"
   }
 }
