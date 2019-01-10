@@ -1,5 +1,6 @@
 {
   "php": {
+    "TEST_PHARSE": "Fraza testowa",
     "GlobalPermission": "Datenzugriff",
     "LBL_SEND_EMAIL": "Via E-Mail senden",
     "--None--": "--keine--",
