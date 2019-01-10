@@ -2,12 +2,12 @@
   "php": {
     "LBL_PROJECT_CONFIGURATION": "Project",
     "LBL_INFO": "Info",
-    "LBL_TYPE": "Status",
-    "LBL_PROJECT": "Project",
+    "LBL_TYPE": "Lead status",
+    "LBL_PROJECT": "Related to",
     "LBL_PROJECT_STATUS_INFO": "Statuses determining that the project is closed",
     "LBL_PROJECTMILESTONE_STATUS_INFO": "Statuses determining that the milestone is closed",
     "LBL_PROJECTTASK_STATUS_INFO": "Statuses determining that the task is closed",
-    "LBL_SAVE_CONFIG_OK": "Changes saved successfully.",
+    "LBL_SAVE_CONFIG_OK": "You have successfully made ​​changes to the configuration.",
     "LBL_SAVE_CONFIG_ERROR": "Failed to save changes.",
     "RealizationProcesses": "Realization processes"
   },
