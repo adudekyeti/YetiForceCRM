@@ -39,7 +39,7 @@
     "SINGLE_Documents": "Document",
     "Title": "Subject",
     "Version": "Version",
-    "ossdc_status": "Status",
+    "ossdc_status": "Lead status",
     "Lack of status": "No status",
     "Checked": "Checked",
     "None": "None",
