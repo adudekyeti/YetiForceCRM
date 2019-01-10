@@ -23,7 +23,7 @@
     "LBL_SET_BANK_OK": "Successfully saved active bank.",
     "LBL_SET_BANK_ERROR": "Failed to set active bank.",
     "LBL_INFORMATIONS": "Information",
-    "LBL_WARNING": "Warning!",
+    "LBL_WARNING": "Attention!",
     "NBP": "National Bank of Poland",
     "ECB": "European Central Bank",
     "CBR": "Central Bank of Russia"
