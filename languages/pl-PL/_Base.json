@@ -1,5 +1,6 @@
 {
   "php": {
+    "TEST_PHARSE": "Fraza testowa",
     "GlobalPermission": "Uprawnienia globalne",
     "LBL_SEND_EMAIL": "Wy\u015blij poczt\u0105",
     "--None--": "--Brak--",
