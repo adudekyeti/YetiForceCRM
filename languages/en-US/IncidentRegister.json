@@ -2,7 +2,7 @@
   "php": {
     "IncidentRegister": "Incident Register",
     "SINGLE_IncidentRegister": "Incident Register",
-    "LBL_BASIC_INFORMATION": "Basic Information",
+    "LBL_BASIC_INFORMATION": "Basic information",
     "FL_NAME": "Name",
     "FL_LOCATION_REGISTER": "Location register",
     "FL_DATASETREGISTER": "Data set register",
