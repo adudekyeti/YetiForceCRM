@@ -2,7 +2,7 @@
   "php": {
     "FInvoiceCost": "Cost invoices",
     "SINGLE_FInvoiceCost": "Cost invoice",
-    "LBL_CUSTOM_INFORMATION": "System information",
+    "LBL_CUSTOM_INFORMATION": "System Information",
     "LBL_INVOICE_ADDRESS": "Invoice address",
     "LBL_ADDRESS_DELIVERY_INFORMATION": "Delivery address",
     "LBL_DESCRIPTION_BLOCK": "Description",
