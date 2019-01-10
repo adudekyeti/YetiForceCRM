@@ -17,7 +17,7 @@
     "LBL_REGISTRATION_INFO": "Registration details",
     "LBL_FINANSIAL_SUMMARY": "Financial summary",
     "FL_LAST_INVOICE_DATE": "Last invoice date",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "LBL_COPY_BILLING_ADDRESS": "Copy billing address",
     "LBL_COPY_SHIPPING_ADDRESS": "Copy shipping address",
     "LBL_DUPLICATES_EXIST": "Account name already exists",
