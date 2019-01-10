@@ -33,7 +33,7 @@
     "LBL_AVAILABLE_TAXS": "Available taxes",
     "LBL_AVAILABLE_DISCOUNTS": "Available discounts",
     "LBL_YES": "Yes",
-    "LBL_NO": "No",
+    "LBL_NO": "Sun",
     "Inventory": "Extended modules",
     "LBL_VIEW_CREDITLIMITS": "Merchant limits base",
     "LBL_VIEW_TAXES": "Tax base",
@@ -51,6 +51,6 @@
     "JS_EDIT": "Edit",
     "JS_DELETE": "Delete",
     "JS_YES": "Yes",
-    "JS_NO": "No"
+    "JS_NO": "Sun"
   }
 }
