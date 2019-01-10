@@ -3,6 +3,7 @@
     "SVendorEnquiries": "Lieferantenanfrage",
     "SQuoteEnquiries": "Angebotsanfragen",
     "SINGLE_SQuoteEnquiries": "Angebotsanfrage",
+    "SINGLE_SVendorEnquiries": "Vendor enquiry",
     "LBL_QUOTESENQUIRES_INFORMATION": "Informationen",
     "LBL_SCALCULATIONS_INFORMATION": "Basis Informationen",
     "LBL_CUSTOM_INFORMATION": "System Informationen",
@@ -23,7 +24,7 @@
     "PLL_IN_REALIZATION": "In Umsetzung",
     "PLL_FOR_VERIFICATION": "Zur Validierung",
     "PLL_CANCELLED": "Abgebrochen",
-    "PLL_COMPLETED": "Vollst\u00e4ndig",
-    "LBL_CHANGE_STATUS": "\u00c4nderungsstatus"
+    "PLL_COMPLETED": "Vollständig",
+    "LBL_CHANGE_STATUS": "Änderungsstatus"
   }
 }
