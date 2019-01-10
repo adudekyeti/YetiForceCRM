@@ -10,12 +10,12 @@
     "FL_STATUS": "Status",
     "PLL_DRAFT": "Entwurf",
     "PLL_IN_REALIZATION": "in Realisierung",
-    "PLL_OBJECTIONS": "Einw\u00e4nde",
+    "PLL_OBJECTIONS": "Einwände",
     "PLL_FOR_APPROVAL": "Zur Genehmigung",
     "PLL_CANCELLED": "Abgebrochen",
     "PLL_ACCEPTED": "Akzeptiert",
     "PLL_RECEIVED": "Empfangen",
-    "PLL_TRANSFER": "\u00dcbertragung",
+    "PLL_TRANSFER": "Übertragung",
     "PLL_DISPATCHED": "aufgeben",
     "FL_TYPE": "Typ"
   }
