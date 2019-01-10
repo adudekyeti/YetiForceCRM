@@ -16,7 +16,7 @@
     "FL_ACCOUNT": "Account",
     "FL_TOTAL": "Net",
     "FL_GROSS": "Gross",
-    "FL_STATUS": "Status",
+    "FL_STATUS": "Lead status",
     "FL_PAYMENT_STATUS": "Payment status",
     "FL_INVOICE_TYPE": "Invoice type",
     "FL_CATEGORY": "Category",
