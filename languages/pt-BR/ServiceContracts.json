@@ -7,20 +7,20 @@
     "LBL_SERVICE_CONTRACT_INFORMATION": "Detalhes do Contrato",
     "Contract No": "No. Contrato",
     "Start Date": "Data Inicial",
-    "End Date": "Data de T\u00e9rmino",
+    "End Date": "Data de Término",
     "Tracking Unit": "Unidade Rastreamento",
     "Total Units": "Unidades Totais",
     "Used Units": "Unidades Utilizadas",
     "Progress": "Progresso",
-    "Planned Duration": "Dura\u00e7\u00e3o Planejada (em Dias)",
-    "Actual Duration": "Dura\u00e7\u00e3o Atual (em Dias)",
+    "Planned Duration": "Duração Planejada (em Dias)",
+    "Actual Duration": "Duração Atual (em Dias)",
     "Support": "Suporte",
     "Administrative": "Administrativo",
     "Undefined": "Indefinido",
     "In Planning": "Planejamento",
     "In Progress": "Em Andamento",
     "On Hold": "Aguardando",
-    "Complete": "Conclu\u00eddo",
+    "Complete": "Concluído",
     "Archived": "Arquivado",
     "Due date": "Data Vencimento",
     "Related to": "Relacionado a",
@@ -31,6 +31,6 @@
     "Hours": "Horas",
     "Days": "Dias",
     "Incidents": "Incidentes",
-    "Services": "Servi\u00e7os"
+    "Services": "Serviços"
   }
 }
