@@ -2,7 +2,6 @@
   "php": {
     "OSSMailView": "Email aziendale",
     "SINGLE_OSSMailView": "Email aziendale",
-    "LBL_ADD_RECORD": "Aggiungi",
     "LBL_RECORDS_LIST": "Lista delle email",
     "LBL_INFORMATION": "Informazioni",
     "LBL_ORIGN_MESSAGE": "Messaggio originale",
@@ -46,9 +45,15 @@
     "RC user": "RC user",
     "FromID": "Sender Id",
     "ToID": "Receiver Id",
+    "LBL_SHOW_PREVIEW_EMAIL": "Show email preview",
+    "LBL_SHOW_PREVIEW_EMAILS": "Show all emails preview",
+    "LBL_CHANGE_FILTER": "Change filter",
     "LBL_FILTER_ALL": "Tutti",
     "LBL_FILTER_ACCOUNTS": "Tutti i aziende",
     "LBL_FILTER_CONTACTS": "Tutti in contatti",
+    "LBL_EXPAND_ALL": "Expand all",
+    "LBL_COLLAPSE_ALL": "Collapse all",
+    "LBL_COUNT_ALL_MAILS": "Number of all emails",
     "LBL_VERIFY": "To verification related",
     "LBL_REL_MOD": "Moduli collegati",
     "LBL_BindMailsOK": "Marked emails to bind, the next activation cron messages will be related to record",
@@ -69,7 +74,9 @@
     "Previous week": "Previous week",
     "Current month": "Current month",
     "Previous month": "Previous month",
-    "LBL_ORGINAL_MAIL_CONTENT": "Orginal mail content"
+    "LBL_ORGINAL_MAIL_CONTENT": "Orginal mail content",
+    "BTN_RESET_RELATED_MAILS": "Reset related emails",
+    "LBL_SET_RELOAD_RELATIONS": "Marked for relation reload"
   },
   "js": {
     "From": "From",
