@@ -1,19 +1,13 @@
 {
   "php": {
-    "RecycleBin": "Corbeille",
-    "LBL_SELECT_MODULE": "S\u00e9lectionner un module",
-    "LBL_EMPTY_RECYCLEBIN": "Vider la corbeille",
-    "LBL_RESTORE": "Restaurer",
-    "LBL_NO_PERMITTED_MODULES": "Aucun module autoris\u00e9 disponible",
-    "LBL_RECORDS_LIST": "Liste d'enregistrement dans la corbeille",
-    "LBL_NO_RECORDS_FOUND": "Aucun enregistrement du module trouv\u00e9 dans la corbeille"
+    "LBL_RECYCLE_DELETE_ALL": "Usuń cały kosz"
   },
   "js": {
-    "JS_DELETE_CONFIRMATION_RB": "Etes-vous sur de vouloir supprimer tous les enregistremenst effac\u00e9s de la base de donn\u00e9es ?",
-    "JS_MASS_DELETE_CONFIRMATION_RB": "Etes-vous sur de vouloir supprimer tous les enregistremenst effac\u00e9s de la base de donn\u00e9es ?",
-    "JS_LBL_RESTORE_RECORD_CONFIRMATION": "Etes-vous sur de vouloir restaurer tous les enregistrements ?",
-    "JS_MSG_EMPTY_RB_CONFIRMATION": "Etes-vous sur de vouloir supprimer tous les enregistremenst effac\u00e9s de la base de donn\u00e9es ?",
-    "JS_LBL_RESTORE_RECORDS_CONFIRMATION": "Etes-vous sur de vouloir restaurer tous les enregistrements ?",
-    "JS_RESTORING_RECORDS": "Restauration des enregistrements"
+    "JS_MASS_DELETE": "Masowe usuwanie",
+    "JS_MASS_ACTIVATE": "Masowa aktywacja",
+    "JS_DELETE_ALL_RECYCLE_RECORD": "Usuń wszystkie rekordy z kosza",
+    "JS_ACTIVATE_RECORD_DESC": "Aktywacja rekordu zmienia tylko stan rekordu nie zmieniając pozostałych informacji. Czy na pewno chcesz aktywować ten rekord?",
+    "JS_DELETE_ALL_RECYCLE_RECORD_DESC": "Usunięcie rekordów spowoduje trwałe i nieodwracalne usunięcie wszystkich informacji o rekordach. Czy na pewno chcesz kontynuować?",
+    "JS_ADDED_TO_QUEUE": "Dodano do kolejki. Wszystkie elementy zostaną usunięte"
   }
 }
