@@ -28,18 +28,27 @@ class Settings_AutomaticAssignment_SaveAjax_Action extends Settings_Vtiger_Save_
 	 */
 	public function save(\App\Request $request)
 	{
-		$data = $request->get('param');
+		$data = $request->getMultiDimensionArray('param',
+			[
+				'tabid' => 'Integer',
+				'assign' => 'Integer',
+				'field' => 'Alnum',
+				'roleid' => 'Alnum',
+				'value' => 'Text',
+				'roles' => ['Alnum'],
+				'smowners' => ['Integer'],
+				'user_limit' => 'Integer',
+				'conditions' => 'Text'
+			]);
 		if ($request->isEmpty('record')) {
 			$recordModel = Settings_AutomaticAssignment_Record_Model::getCleanInstance();
 		} else {
 			$recordModel = Settings_AutomaticAssignment_Record_Model::getInstanceById($request->getInteger('record'));
 		}
-
 		$dataFull = array_merge($recordModel->getData(), $data);
 		$recordModel->setData($dataFull);
 		$recordModel->checkDuplicate = true;
 		$recordModel->save();
-
 		$responceToEmit = new Vtiger_Response();
 		$responceToEmit->setResult($recordModel->getId());
 		$responceToEmit->emit();
@@ -52,15 +61,13 @@ class Settings_AutomaticAssignment_SaveAjax_Action extends Settings_Vtiger_Save_
 	 */
 	public function changeRoleType(\App\Request $request)
 	{
-		$member = $request->get('param');
-		$recordId = $request->get('record');
-		if ($recordId) {
-			$recordModel = Settings_AutomaticAssignment_Record_Model::getInstanceById($recordId);
+		$member = $request->getByType('param', 'Alnum');
+		if (!$request->isEmpty('record')) {
+			$recordModel = Settings_AutomaticAssignment_Record_Model::getInstanceById($request->getInteger('record'));
 		} else {
 			$recordModel = Settings_AutomaticAssignment_Record_Model::getCleanInstance();
 		}
 		$recordModel->changeRoleType($member);
-
 		$responceToEmit = new Vtiger_Response();
 		$responceToEmit->setResult($recordModel->getId());
 		$responceToEmit->emit();
@@ -73,10 +80,8 @@ class Settings_AutomaticAssignment_SaveAjax_Action extends Settings_Vtiger_Save_
 	 */
 	public function deleteElement(\App\Request $request)
 	{
-		$recordId = $request->get('record');
-		$recordModel = Settings_AutomaticAssignment_Record_Model::getInstanceById($recordId);
-		$recordModel->deleteElement($request->get('name'), $request->get('value'));
-
+		$recordModel = Settings_AutomaticAssignment_Record_Model::getInstanceById($request->getInteger('record'));
+		$recordModel->deleteElement($request->getByType('name', 'Standard'), $request->getByType('value', 'Alnum'));
 		$responceToEmit = new Vtiger_Response();
 		$responceToEmit->setResult($recordModel->getId());
 		$responceToEmit->emit();
