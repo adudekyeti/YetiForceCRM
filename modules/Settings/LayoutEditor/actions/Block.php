@@ -19,21 +19,21 @@ class Settings_LayoutEditor_Block_Action extends Settings_Vtiger_Index_Action
 
 	public function save(\App\Request $request)
 	{
-		$blockId = $request->get('blockid');
-		$sourceModule = $request->getByType('sourceModule', 2);
+		$blockId = $request->getInteger('blockid', '');
+		$sourceModule = $request->getByType('sourceModule', 'Alnum');
 		$modueInstance = Vtiger_Module_Model::getInstance($sourceModule);
 		$beforeBlockId = false;
 
 		if (!empty($blockId)) {
 			$blockInstance = Settings_LayoutEditor_Block_Model::getInstance($blockId);
-			$blockInstance->set('display_status', $request->get('display_status'));
+			$blockInstance->set('display_status', $request->getInteger('display_status'));
 			$isDuplicate = false;
 		} else {
 			$blockInstance = new Settings_LayoutEditor_Block_Model();
-			$blockInstance->set('label', $request->get('label'));
+			$blockInstance->set('label', $request->getByType('label', 'Text'));
 			$blockInstance->set('iscustom', '1');
 			//Indicates block id after which you need to add the new block
-			$beforeBlockId = $request->get('beforeBlockId');
+			$beforeBlockId = $request->getInteger('beforeBlockId', '');
 			if (!empty($beforeBlockId)) {
 				$beforeBlockInstance = Vtiger_Block_Model::getInstance($beforeBlockId);
 				$beforeBlockSequence = $beforeBlockInstance->get('sequence');
@@ -43,9 +43,8 @@ class Settings_LayoutEditor_Block_Action extends Settings_Vtiger_Index_Action
 				//push all other block down so that we can keep new block there
 				Vtiger_Block_Model::pushDown($beforeBlockSequence, $modueInstance->getId());
 			}
-			$isDuplicate = Vtiger_Block_Model::checkDuplicate($request->get('label'), $modueInstance->getId());
+			$isDuplicate = Vtiger_Block_Model::checkDuplicate($request->getByType('label', 'Text'), $modueInstance->getId());
 		}
-
 		$response = new Vtiger_Response();
 		if (!$isDuplicate) {
 			try {
@@ -69,7 +68,7 @@ class Settings_LayoutEditor_Block_Action extends Settings_Vtiger_Index_Action
 	{
 		$response = new Vtiger_Response();
 		try {
-			$sequenceList = $request->get('sequence');
+			$sequenceList = $request->getArray('sequence', 'Integer');
 			Vtiger_Block_Model::updateSequenceNumber($sequenceList);
 			$response->setResult(['success' => true]);
 		} catch (Exception $e) {
@@ -81,19 +80,17 @@ class Settings_LayoutEditor_Block_Action extends Settings_Vtiger_Index_Action
 	public function delete(\App\Request $request)
 	{
 		$response = new Vtiger_Response();
-		$blockId = $request->get('blockid');
+		$blockId = $request->getInteger('blockid');
 		$checkIfFieldsExists = Vtiger_Block_Model::checkFieldsExists($blockId);
 		if ($checkIfFieldsExists) {
 			$response->setError('502', \App\Language::translate('LBL_FIELDS_EXISTS_IN_BLOCK', $request->getModule(false)));
 			$response->emit();
-
 			return;
 		}
 		$blockInstance = Vtiger_Block_Model::getInstance($blockId);
 		if (!$blockInstance->isCustomized()) {
 			$response->setError('502', \App\Language::translate('LBL_DELETE_CUSTOM_BLOCKS', $request->getModule(false)));
 			$response->emit();
-
 			return;
 		}
 		try {

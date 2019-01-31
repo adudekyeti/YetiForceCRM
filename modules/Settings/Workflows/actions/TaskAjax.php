@@ -24,9 +24,8 @@ class Settings_Workflows_TaskAjax_Action extends Settings_Vtiger_Basic_Action
 
 	public function delete(\App\Request $request)
 	{
-		$record = $request->get('task_id');
-		if (!empty($record)) {
-			$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($record);
+		if (!$request->isEmpty('task_id')) {
+			$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($request->getInteger('task_id'));
 			$taskRecordModel->delete();
 			$response = new Vtiger_Response();
 			$response->setResult(['ok']);
@@ -36,11 +35,10 @@ class Settings_Workflows_TaskAjax_Action extends Settings_Vtiger_Basic_Action
 
 	public function changeStatus(\App\Request $request)
 	{
-		$record = $request->get('task_id');
-		if (!empty($record)) {
-			$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($record);
+		if (!$request->isEmpty('task_id')) {
+			$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($request->getInteger('task_id'));
 			$taskObject = $taskRecordModel->getTaskObject();
-			if ($request->get('status') == 'true') {
+			if ($request->getBoolean('status')) {
 				$taskObject->active = true;
 			} else {
 				$taskObject->active = false;
@@ -54,15 +52,13 @@ class Settings_Workflows_TaskAjax_Action extends Settings_Vtiger_Basic_Action
 
 	public function changeStatusAllTasks(\App\Request $request)
 	{
-		$record = $request->get('record');
-		$status = $request->get('status');
-		if (!empty($record)) {
-			$workflowModel = Settings_Workflows_Record_Model::getInstance($record);
+		if (!$request->isEmpty('record')) {
+			$workflowModel = Settings_Workflows_Record_Model::getInstance($request->getInteger('record'));
 			$taskList = $workflowModel->getTasks();
 			foreach ($taskList as $task) {
 				$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($task->getId());
 				$taskObject = $taskRecordModel->getTaskObject();
-				if ($status == 'true') {
+				if ($request->getBoolean('status')) {
 					$taskObject->active = true;
 				} else {
 					$taskObject->active = false;
@@ -77,38 +73,31 @@ class Settings_Workflows_TaskAjax_Action extends Settings_Vtiger_Basic_Action
 
 	public function save(\App\Request $request)
 	{
-		$workflowId = $request->get('for_workflow');
+		$workflowId = $request->getInteger('for_workflow', '');
 		if (!empty($workflowId)) {
-			$record = $request->get('task_id');
-			if ($record) {
-				$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($record);
+			if (!$request->isEmpty('task_id')) {
+				$taskRecordModel = Settings_Workflows_TaskRecord_Model::getInstance($request->getInteger('task_id'));
 			} else {
 				$workflowModel = Settings_Workflows_Record_Model::getInstance($workflowId);
-				$taskRecordModel = Settings_Workflows_TaskRecord_Model::getCleanInstance($workflowModel, $request->get('taskType'));
+				$taskRecordModel = Settings_Workflows_TaskRecord_Model::getCleanInstance($workflowModel, $request->getByType('taskType', 'Alnum'));
 			}
-
 			$taskObject = $taskRecordModel->getTaskObject();
-			$taskObject->summary = htmlspecialchars($request->get('summary'));
-			$active = $request->get('active');
-			if ($active == 'true') {
+			$taskObject->summary = $request->getByType('summary', 'Text');
+			if ($request->getBoolean('active')) {
 				$taskObject->active = true;
-			} elseif ($active == 'false') {
+			} else {
 				$taskObject->active = false;
 			}
-			$checkSelectDate = $request->get('check_select_date');
-
-			if (!empty($checkSelectDate)) {
+			if (!$request->isEmpty('check_select_date')) {
 				$trigger = [
-					'days' => ($request->get('select_date_direction') == 'after' ? 1 : -1) * (int) $request->get('select_date_days'),
-					'field' => $request->get('select_date_field'),
+					'days' => ($request->getByType('select_date_direction', 'Standard') === 'after' ? 1 : -1) * $request->getInteger('select_date_days'),
+					'field' => $request->getByType('select_date_field', 'Alnum'),
 				];
 				$taskObject->trigger = $trigger;
 			} else {
 				$taskObject->trigger = null;
 			}
-
 			$fieldNames = $taskObject->getFieldNames();
-
 			foreach ($fieldNames as $fieldName) {
 				if ($fieldName == 'field_value_mapping' || $fieldName == 'content') {
 					$values = \App\Json::decode($request->getRaw($fieldName));

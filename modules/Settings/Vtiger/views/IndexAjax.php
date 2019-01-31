@@ -11,7 +11,7 @@
 class Settings_Vtiger_IndexAjax_View extends Settings_Vtiger_Index_View
 {
 	use \App\Controller\ExposeMethod,
-	 App\Controller\ClearProcess;
+		App\Controller\ClearProcess;
 
 	public function __construct()
 	{
@@ -22,7 +22,7 @@ class Settings_Vtiger_IndexAjax_View extends Settings_Vtiger_Index_View
 
 	public function getSettingsShortCutBlock(\App\Request $request)
 	{
-		$fieldid = $request->get('fieldid');
+		$fieldid = $request->getInteger('fieldid');
 		$viewer = $this->getViewer($request);
 		$qualifiedModuleName = $request->getModule(false);
 		$pinnedSettingsShortcuts = Settings_Vtiger_MenuItem_Model::getPinnedItems();

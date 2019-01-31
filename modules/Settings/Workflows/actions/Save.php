@@ -15,12 +15,12 @@ class Settings_Workflows_Save_Action extends Settings_Vtiger_Basic_Action
 	 */
 	public function process(\App\Request $request)
 	{
-		$summary = $request->get('summary');
-		$moduleName = $request->getByType('module_name', 2);
+		$summary = $request->getByType('summary', 'Text');
+		$moduleName = $request->getByType('module_name', 'Alnum');
 		$conditions = $request->getArray('conditions', 'Text');
-		$filterSavedInNew = $request->get('filtersavedinnew');
-		$executionCondition = $request->get('execution_condition');
-		$workflowScheduleType = $request->get('schtypeid');
+		$filterSavedInNew = $request->getInteger('filtersavedinnew', null);
+		$executionCondition = $request->getInteger('execution_condition');
+		$workflowScheduleType = $request->getInteger('schtypeid', '');
 		if ($request->isEmpty('record')) {
 			$workflowModel = Settings_Workflows_Record_Model::getCleanInstance($moduleName);
 		} else {
@@ -42,11 +42,11 @@ class Settings_Workflows_Save_Action extends Settings_Vtiger_Basic_Action
 			$dayOfWeek = null;
 			$annualDates = null;
 			if ($workflowScheduleType == Workflow::$SCHEDULED_WEEKLY) {
-				$dayOfWeek = \App\Json::encode($request->get('schdayofweek'));
+				$dayOfWeek = \App\Json::encode($request->getArray('schdayofweek', 'Integer'));
 			} elseif ($workflowScheduleType == Workflow::$SCHEDULED_MONTHLY_BY_DATE) {
-				$dayOfMonth = \App\Json::encode($request->get('schdayofmonth'));
+				$dayOfMonth = \App\Json::encode($request->getArray('schdayofmonth', 'Integer'));
 			} elseif ($workflowScheduleType == Workflow::$SCHEDULED_ON_SPECIFIC_DATE) {
-				$date = $request->get('schdate');
+				$date = $request->getByType('schdate', 'DateInUserFormat');
 				$dateDBFormat = DateTimeField::convertToDBFormat($date);
 				$nextTriggerTime = $dateDBFormat . ' ' . $schtime;
 				$currentTime = Vtiger_Util_Helper::getActiveAdminCurrentDateTime();
@@ -57,7 +57,7 @@ class Settings_Workflows_Save_Action extends Settings_Vtiger_Basic_Action
 				}
 				$annualDates = \App\Json::encode([$dateDBFormat]);
 			} elseif ($workflowScheduleType == Workflow::$SCHEDULED_ANNUALLY) {
-				$annualDates = \App\Json::encode($request->get('schannualdates'));
+				$annualDates = \App\Json::encode($request->getArray('schannualdates', 'DateInUserFormat'));
 			}
 			$workflowModel->set('schdayofmonth', $dayOfMonth);
 			$workflowModel->set('schdayofweek', $dayOfWeek);

@@ -14,8 +14,7 @@ class Settings_Workflows_Import_View extends Settings_Vtiger_Index_View
 		\App\Log::trace('Start ' . __METHOD__);
 		$qualifiedModule = $request->getModule(false);
 		$viewer = $this->getViewer($request);
-
-		if ($request->has('upload') && $request->get('upload') == 'true') {
+		if ($request->getBoolean('upload')) {
 			$xmlName = $_FILES['imported_xml']['name'];
 			$uploadedXml = $_FILES['imported_xml']['tmp_name'];
 			$xmlError = $_FILES['imported_xml']['error'];
@@ -23,7 +22,6 @@ class Settings_Workflows_Import_View extends Settings_Vtiger_Index_View
 			$extension = end($explodeXmlName);
 			if ($xmlError == UPLOAD_ERR_OK && $extension === 'xml') {
 				$xml = simplexml_load_file($uploadedXml);
-
 				$params = [];
 				$taskIndex = $methodIndex = 0;
 				foreach ($xml as $fieldsKey => $fieldsValue) {
@@ -54,7 +52,6 @@ class Settings_Workflows_Import_View extends Settings_Vtiger_Index_View
 				}
 				$workflowModel = Settings_Workflows_Module_Model::getInstance('Settings:Workflows');
 				$messages = $workflowModel->importWorkflow($params);
-
 				$viewer->assign('RECORDID', $messages['id']);
 				$viewer->assign('UPLOAD', true);
 				$viewer->assign('MESSAGES', $messages);
@@ -63,7 +60,6 @@ class Settings_Workflows_Import_View extends Settings_Vtiger_Index_View
 				$viewer->assign('UPLOAD', false);
 			}
 		}
-
 		$viewer->assign('QUALIFIED_MODULE', $qualifiedModule);
 		$viewer->view('Import.tpl', $qualifiedModule);
 		\App\Log::trace('End ' . __METHOD__);

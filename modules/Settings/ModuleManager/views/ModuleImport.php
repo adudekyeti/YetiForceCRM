@@ -119,13 +119,13 @@ class Settings_ModuleManager_ModuleImport_View extends Settings_Vtiger_Index_Vie
 	{
 		$viewer = $this->getViewer($request);
 		$qualifiedModuleName = $request->getModule(false);
-		$importModuleName = $request->get('module_import_name');
-		$uploadFile = $request->get('module_import_file');
+		$importModuleName = $request->getByType('module_import_name', 'Alnum');
+		$uploadFile = $request->getByType('module_import_file', 'Path');
 		$uploadDir = Settings_ModuleManager_Module_Model::getUploadDirectory();
 		$uploadFileName = "$uploadDir/$uploadFile";
 		\vtlib\Deprecated::checkFileAccess($uploadFileName);
 
-		$importType = $request->getByType('module_import_type');
+		$importType = $request->getByType('module_import_type', 'Standard');
 		if (strtolower($importType) === 'language') {
 			$package = new vtlib\Language();
 			$viewer->assign('IMPORT_MODULE_TYPE', 'Language');
@@ -155,21 +155,21 @@ class Settings_ModuleManager_ModuleImport_View extends Settings_Vtiger_Index_Vie
 	{
 		$viewer = $this->getViewer($request);
 		$qualifiedModuleName = $request->getModule(false);
-		$importModuleName = $request->get('module_import_name');
-		$uploadFile = $request->get('module_import_file');
+		$importModuleName = $request->getByType('module_import_name', 'Alnum');
+		$uploadFile = $request->getByType('module_import_file', 'Path');
 		$uploadDir = Settings_ModuleManager_Module_Model::getUploadDirectory();
 		$uploadFileName = "$uploadDir/$uploadFile";
 		\vtlib\Deprecated::checkFileAccess($uploadFileName);
 
-		$importType = $request->get('module_import_type');
-		if (strtolower($importType) == 'language') {
+		$importType = $request->getByType('module_import_type', 'Standard');
+		if (strtolower($importType) === 'language') {
 			$package = new vtlib\Language();
 		} else {
 			$package = new vtlib\Package();
 		}
 		$package->initParameters($request);
 
-		if (strtolower($importType) == 'language') {
+		if (strtolower($importType) === 'language') {
 			$package->import($uploadFileName);
 		} else {
 			$package->update(vtlib\Module::getInstance($importModuleName), $uploadFileName);
