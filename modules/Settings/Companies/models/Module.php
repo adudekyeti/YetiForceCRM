@@ -12,6 +12,39 @@ class Settings_Companies_Module_Model extends Settings_Vtiger_Module_Model
 	public $baseTable = 's_yf_companies';
 	public $baseIndex = 'id';
 	public $listFields = ['name' => 'LBL_NAME', 'status' => 'LBL_STATUS', 'type' => 'LBL_TYPE', 'email' => 'LBL_EMAIL', 'city' => 'LBL_CITY', 'country' => 'LBL_COUNTRY', 'website' => 'LBL_WEBSITE'];
+	public static $formFields = [
+		'name' => [
+			'label' => 'LBL_NAME',
+		],
+		'industry' => [
+			'label' => 'LBL_INDUSTRY',
+		],
+		'city' => [
+			'label' => 'LBL_CITY',
+		],
+		'country' => [
+			'label' => 'LBL_COUNTRY',
+		],
+		'companysize' => [
+			'label' => 'LBL_COMPANYSIZE',
+		],
+		'website' => [
+			'label' => 'LBL_WEBSITE',
+		],
+		'spacer' => [],
+		'newsletter' => [
+			'label' => 'LBL_NEWSLETTER',
+		],
+		'firstname' => [
+			'label' => 'LBL_FIRSTNAME',
+		],
+		'lastname' => [
+			'label' => 'LBL_LASTNAME',
+		],
+		'email' => [
+			'label' => 'LBL_EMAIL',
+		],
+	];
 	public $name = 'Companies';
 
 	/**
@@ -53,5 +86,10 @@ class Settings_Companies_Module_Model extends Settings_Vtiger_Module_Model
 		return array_merge(
 			(new \App\Db\Query())->select(['industry'])->from('vtiger_industry')->column(), (new \App\Db\Query())->select(['subindustry'])->from('vtiger_subindustry')->column()
 		);
+	}
+
+	public static function getFormFields()
+	{
+		return static::$formFields;
 	}
 }
