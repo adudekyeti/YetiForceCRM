@@ -291,7 +291,7 @@ class Settings_Companies_Record_Model extends Settings_Vtiger_Record_Model
 	{
 		$moduleName = $this->getModule()->getName(true);
 		$companyId = $this->getId();
-		$params = ['uitype' => 7, 'column' => $name, 'name' => "companies[$companyId][$name]", 'value' => '', 'label' => $label, 'displaytype' => 1, 'typeofdata' => 'V~M', 'presence' => '', 'isEditableReadOnly' => false, 'maximumlength' => '255'];
+		$params = ['uitype' => 7, 'column' => $name, 'name' => "companies[$companyId][$name]", 'id' => "companies_$name", 'value' => '', 'label' => $label, 'displaytype' => 1, 'typeofdata' => 'V~M', 'presence' => '', 'isEditableReadOnly' => false, 'maximumlength' => '255'];
 		switch ($name) {
 			case 'name':
 				unset($params['validator']);
@@ -327,7 +327,9 @@ class Settings_Companies_Record_Model extends Settings_Vtiger_Record_Model
 				$params['uitype'] = 13;
 				break;
 			case 'newsletter':
+				$params['typeofdata'] = 'V~O';
 				$params['uitype'] = 56;
+				unset($params['validator']);
 				break;
 			default:
 				break;

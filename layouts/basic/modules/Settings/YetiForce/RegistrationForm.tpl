@@ -1,6 +1,6 @@
 {*<!-- {[The file is published on the basis of YetiForce Public License 3.0 that can be found in the following directory: licenses/LicenseEN.txt or yetiforce.com]} -->*}
 {strip}
-	<div class="tpl-Settings-YetiForce-RegistrationForm card">
+	<div class="tpl-Settings-YetiForce-RegistrationForm card js-card-body" data-js="container">
 		<div class="card-body">
 			{assign var="RECORD_MODEL" value=Settings_Companies_Record_Model::getInstance($company['id'])}
 			{foreach key="FIELD_NAME" item="FIELD" from=$RECORD_MODEL->getModule()->getFormFields()}
@@ -19,10 +19,14 @@
 						</b>
 					</label>
 					<div class="col-lg-8">
-						{\App\Layout::getTemplatePath($FIELD_MODEL->getUITypeModel()->getTemplateName())}
 						{include file=\App\Layout::getTemplatePath($FIELD_MODEL->getUITypeModel()->getTemplateName())}
 					</div>
 				</div>
+				{if $FIELD_NAME === 'newsletter'}
+					<div class="newsletterContent d-none" data-js="class:d-none">
+				{elseif $FIELD_NAME === 'email'}
+					</div>
+				{/if}
 			{/foreach}
 		</div>
 	</div>
