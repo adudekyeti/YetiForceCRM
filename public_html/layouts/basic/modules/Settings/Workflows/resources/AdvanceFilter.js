@@ -174,9 +174,6 @@ Vtiger_AdvanceFilter_Js('Workflows_AdvanceFilter_Js', {}, {
 					rowValues['groupid'] = 1;
 				}
 
-				if (rowElement.is(":last-child")) {
-					rowValues['column_condition'] = '';
-				}
 				iterationValues[columnIndex] = rowValues;
 				columnIndex++;
 			});
