@@ -30,8 +30,8 @@
 	{if !empty($CHILD_COMMENTS)}
 		</div>
 	{/if}
-	{if !$IS_READ_ONLY && empty($NO_COMMENT_FORM)}
-		<div class="d-none basicAddCommentBlock my-2">
+	{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && empty($NO_COMMENT_FORM)}
+		<div class=" basicAddCommentBlock my-2">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="input-group">

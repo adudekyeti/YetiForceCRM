@@ -31,7 +31,7 @@
 									<div class="d-flex align-items-center">
 										<strong>{$HISTORY['userModel']->getName()}</strong>
 										<div class="btn-group ml-auto mr-1 d-md-block d-none" role="group">
-											{if !$IS_READ_ONLY && $HISTORY['type'] eq 'OSSMailView'}
+											{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $HISTORY['type'] eq 'OSSMailView'}
 												<button data-url="{$HISTORY['url']|cat:'&noloadlibs=1'}" type="button" class="showModal btn btn-sm btn-light" data-cb="Vtiger_Index_Js.registerMailButtons">
 													<span class="body-icon fas fa-search"
 														title="{\App\Language::translate('LBL_SHOW_PREVIEW_EMAIL', 'OSSMailView')}"></span>
@@ -77,7 +77,7 @@
 												</div>
 											</button>
 											<div class="u-hidden-block items-center js-comment-actions">
-												{if !$IS_READ_ONLY && $HISTORY['type'] eq 'OSSMailView'}
+												{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $HISTORY['type'] eq 'OSSMailView'}
 													<button data-url="{$HISTORY['url']|cat:'&noloadlibs=1'}" type="button"
 														class="showModal btn btn-sm btn-light"
 														data-cb="Vtiger_Index_Js.registerMailButtons">
@@ -129,7 +129,7 @@
 					</li>
 				{/foreach}
 			</ul>
-			{if !$IS_READ_ONLY && count($HISTORIES) eq $PAGING_MODEL->getPageLimit() && !$NO_MORE}
+			{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && count($HISTORIES) eq $PAGING_MODEL->getPageLimit() && !$NO_MORE}
 				<div id="moreRelatedUpdates">
 					<div class="float-right mb-1">
 						<button type="button"

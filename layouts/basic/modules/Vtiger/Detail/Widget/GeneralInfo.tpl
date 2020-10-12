@@ -11,7 +11,7 @@
 			<div class="c-detail-widget__header__title">
 				<h5 class="mb-0" title="{$TRANSLATED_LABEL}">{$TRANSLATED_LABEL}</h5>
 			</div>
-			{if !$IS_READ_ONLY}
+			{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 				<div class="row inline justify-center js-hb__container ml-auto">
 					<button type="button" tabindex="0" class="btn js-hb__btn u-hidden-block-btn text-grey-6 py-0 px-1">
 						<div class="text-center col items-center justify-center row">
@@ -31,7 +31,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="c-detail-widget__content js-detail-widget-collapse js-detail-widget-content collapse multi-collapse pt-0{if $IS_READ_ONLY} show{/if}" id="{$TRANSLATED_LABEL}-collapse" data-storage-key="GeneralInfo" aria-labelledby="{$TRANSLATED_LABEL}"
+	<div class="c-detail-widget__content js-detail-widget-collapse js-detail-widget-content collapse multi-collapse pt-0{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)} show{/if}" id="{$TRANSLATED_LABEL}-collapse" data-storage-key="GeneralInfo" aria-labelledby="{$TRANSLATED_LABEL}"
 		data-js="container|value">
 		<table class="c-detail-widget__table u-table-fixed">
 			<tbody>
@@ -57,7 +57,7 @@
 											{include file=\App\Layout::getTemplatePath($FIELD_MODEL->getUITypeModel()->getDetailViewTemplateName())
 											FIELD_MODEL=$FIELD_MODEL USER_MODEL=$USER_MODEL MODULE=$MODULE_NAME RECORD=$RECORD SOURCE_TPL='GeneralInfoWidget'}
 										</div>
-										{if !$IS_READ_ONLY && $FIELD_MODEL->isEditable() eq 'true' &&
+										{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $FIELD_MODEL->isEditable() eq 'true' &&
 										($FIELD_MODEL->getFieldDataType()!=Vtiger_Field_Model::REFERENCE_TYPE) && $IS_AJAX_ENABLED &&
 										$FIELD_MODEL->isAjaxEditable() eq 'true'}
 											<div class="d-none edit input-group input-group-sm px-0">

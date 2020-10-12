@@ -62,7 +62,7 @@
 						{else}
 						{$RECORD->getDisplayValue('subject')}
 						{/if}&nbsp;
-						{if !$IS_READ_ONLY && $RECORD->isEditable()}
+						{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $RECORD->isEditable()}
 							<a href="{$RECORD->getEditViewUrl()}" class="fieldValue">
 								<span class="yfi yfi-full-editing-view fa-fw js-detail-quick-edit"
 									  title="{\App\Language::translate('LBL_EDIT',$MODULE_NAME)}"></span>
@@ -78,7 +78,7 @@
 					<div class="row">
 						<div class="activityStatus col-md-12">
 							<input value="{\App\Purifier::encodeHtml($RECORD->get('activitytype'))}" type="hidden" class="activityType"/>
-							{if !$IS_READ_ONLY && $RECORD->isEditable()}
+							{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $RECORD->isEditable()}
 								<div>
 									<strong>
 										<span class="fas fa-tags fa-fw mr-1"></span>
@@ -116,7 +116,7 @@
 									{\App\Language::translate('LBL_NO_DESCRIPTION',$MODULE_NAME)}
 								</span>
 							</span>
-							{if !$IS_READ_ONLY}
+							{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 								<span class="js-activity-buttons__container d-none" data-js="class: d-none">
 									<button class="btn btn-sm btn-success js-save-description u-fs-95per my-1 mr-1 py-0 px-1" type="button" data-js="click">
 										<span class="fas fa-check mr-1"></span>{\App\Language::translate('LBL_SAVE',$MODULE_NAME)}
@@ -168,7 +168,7 @@
 							">
 							<span class="fas fa-info-circle fa-fw"></span>
 						</span>
-							{if !$IS_READ_ONLY && $RECORD->isEditable()}
+							{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $RECORD->isEditable()}
 								<span class="edit d-none">
 								{assign var=FIELD_MODEL value=$RECORD->getModule()->getField('description')}
 									{assign var=FIELD_VALUE value=$FIELD_MODEL->set('fieldvalue', $RECORD->get('description'))}

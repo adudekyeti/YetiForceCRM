@@ -45,7 +45,7 @@
 								</label>
 							</div>
 						{/if}
-						{if !$IS_READ_ONLY}
+						{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 							<button class="btn btn-sm btn-light addButton createActivity"
 								data-url="sourceModule={$RECORD->getModuleName()}&sourceRecord={$RECORD->getId()}&relationOperation=true"
 								type="button" title="{App\Language::translate('LBL_ADD',$MODULE_NAME)}">

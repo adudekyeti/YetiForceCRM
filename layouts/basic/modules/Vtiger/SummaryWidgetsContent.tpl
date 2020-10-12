@@ -7,7 +7,7 @@
 			<table class="table c-detail-widget__table listViewEntriesTable">
 				<thead>
 				<tr class="text-left">
-					{if !$IS_READ_ONLY}
+					{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 						<th class="noWrap p-1"></th>
 					{/if}
 					{foreach item=HEADER_FIELD from=$RELATED_HEADERS}
@@ -33,7 +33,7 @@
 							{if $RELATED_RECORD->isViewable()}
 						data-recordUrl='{$RELATED_RECORD->getDetailViewUrl()}'
 							{/if}>
-						{if !$IS_READ_ONLY}
+						{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 							<td class="noWrap leftRecordActions listButtons {$WIDTHTYPE}">
 								{include file=\App\Layout::getTemplatePath('RelatedListLeftSide.tpl', $RELATED_MODULE_NAME)}
 							</td>
@@ -196,7 +196,7 @@
 			<table class="table c-detail-widget__table listViewEntriesTable">
 				<thead>
 				<tr class="text-center">
-					{if !$IS_READ_ONLY}
+					{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 						<th class="noWrap p-1">&nbsp;</th>
 					{/if}
 					{foreach item=HEADER_FIELD from=$RELATED_HEADERS}
@@ -218,7 +218,7 @@
 							{if $RELATED_RECORD->isViewable()}
 						data-recordUrl='{$RELATED_RECORD->getDetailViewUrl()}'
 							{/if}>
-						{if !$IS_READ_ONLY}
+						{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 							<td class="noWrap leftRecordActions listButtons {$WIDTHTYPE}">
 								{include file=\App\Layout::getTemplatePath('RelatedListLeftSide.tpl', $RELATED_MODULE_NAME)}
 							</td>

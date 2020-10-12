@@ -14,7 +14,7 @@
 	<div class="tpl-Base-RecentComments js-comments-container js-completions__container commentContainer recentComments" data-js="container">
 		<div class="js-comments-body js-completions__messages commentsBody" data-js="html | click">
 			<div class="my-1">
-				{if !$IS_READ_ONLY && $COMMENTS_MODULE_MODEL->isPermitted('CreateView')}
+				{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $COMMENTS_MODULE_MODEL->isPermitted('CreateView')}
 					<div class="js-add-comment-block addCommentBlock" data-js="container|remove">
 						<div class="input-group input-group-sm">
 							<div class="input-group-prepend">
@@ -41,14 +41,14 @@
 			{else}
 				{include file=\App\Layout::getTemplatePath('NoComments.tpl')}
 			{/if}
-			{if !$IS_READ_ONLY && $PAGING_MODEL->isNextPageExists()}
+			{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $PAGING_MODEL->isNextPageExists()}
 				<a href="javascript:void(0)" class="js-more-recent-comments btn btn-sm btn-link float-right my-1" data-js="click">
 					{\App\Language::translate('LBL_MORE',$MODULE_NAME)}...
 				</a>
 			{/if}
 
 		</div>
-		{if !$IS_READ_ONLY}
+		{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY)}
 			<div class="d-none basicAddCommentBlock mt-1">
 				<div class="row">
 					<div class="col-md-12">

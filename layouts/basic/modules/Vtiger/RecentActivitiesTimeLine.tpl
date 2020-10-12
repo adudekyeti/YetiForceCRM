@@ -230,7 +230,7 @@
 		{/if}
 		<input type="hidden" id="newChange" value="{$NEW_CHANGE}"/>
 		<div class="d-flex pt-0 pb-2 px-0 js-more-link">
-			{if !$IS_READ_ONLY && $PAGING_MODEL->isNextPageExists()}
+			{if (!isset($IS_READ_ONLY) || !$IS_READ_ONLY) && $PAGING_MODEL->isNextPageExists()}
 				<div class="ml-auto">
 					<button type="button" class="btn btn-link btn-sm moreRecentUpdates">{\App\Language::translate('LBL_MORE',$MODULE_NAME)}	..</button>
 				</div>
